@@ -1,3 +1,9 @@
+Istruzione per aprire l'app in ambiente di sviluppo:
+
+1. npm install
+2. ng add @ng-bootstrap/ng-bootstrap
+3.
+
 # U3BuildWeek
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
