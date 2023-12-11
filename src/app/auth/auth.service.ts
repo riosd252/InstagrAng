@@ -11,20 +11,20 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 })
 export class AuthService {
   jwtHelper = new JwtHelperService();
-  apiURL = environment.apiURL;
+  apiURL = environment.apiUrl;
   private authSubj = new BehaviorSubject<null | AuthData>(null);
   user$ = this.authSubj.asObservable();
   user_!: AuthData;
 
   constructor(private http: HttpClient, private router: Router) {}
 
-  login(data: { email: string; password: string }) {
-    return this.http.post<AuthData>(`${this.apiURL}/login`, data).pipe(
+  logIn(data: { email: string; password: string }) {
+    return this.http.post<AuthData>(`${this.apiURL}`, data).pipe(
       tap((logged) => {
         this.authSubj.next(logged);
         this.user_ = logged;
         localStorage.setItem('user', JSON.stringify(logged));
-        this.router.navigate(['/']);
+        this.router.navigate(['/home']);
       })
     );
   }
@@ -32,31 +32,31 @@ export class AuthService {
   restore() {
     const user = localStorage.getItem('user');
     if (!user) {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/']);
       return;
     }
     const userData: AuthData = JSON.parse(user);
     if (this.jwtHelper.isTokenExpired(userData.accessToken)) {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/']);
       return;
     }
     this.authSubj.next(userData);
   }
 
-  register(user: {
+  signUp(user: {
     name: string;
     surname: string;
     email: string;
     password: string;
   }) {
-    return this.http.post(`${this.apiURL}/signin`, user).pipe(
+    return this.http.post(`${this.apiURL}/signup`, user).pipe(
       tap(() => {
-        this.router.navigate(['/login']);
+        this.router.navigate(['/']);
       })
     );
   }
 
-  logout() {
+  logOut() {
     this.authSubj.next(null);
     localStorage.removeItem('user');
     this.router.navigate(['/']);
