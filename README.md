@@ -2,7 +2,19 @@ Istruzione per aprire l'app in ambiente di sviluppo:
 
 1. npm install
 2. ng add @ng-bootstrap/ng-bootstrap
-3.
+3. npm install json-server
+4. npm install json-server-auth
+5. npm install concurrently
+6. npm install @auth0/angular-jwt
+7. modificare il package.json aggiungendo:
+   "ng": "ng",
+   "start": "ng serve -o",
+   "build": "ng build",
+   "watch": "ng build --watch --configuration development",
+   "test": "ng test",
+   "backend": "json-server-auth --watch db.json --port 4201",
+   "fullstack": "concurrently \"npm run backend\" \"npm run start\""
+8. avviare il comando "npm run fullstack" da console VSCode
 
 # U3BuildWeek
 
