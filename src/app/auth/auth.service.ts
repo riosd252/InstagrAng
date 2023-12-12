@@ -51,6 +51,7 @@ export class AuthService {
     surname: string;
     email: string;
     password: string;
+    profileImageUrl: string;
   }) {
     return this.http.post(`${this.apiURL}/signup`, user).pipe(
       tap(() => {

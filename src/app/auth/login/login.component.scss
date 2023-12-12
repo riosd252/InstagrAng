@@ -1,1 +1,42 @@
+form {
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  // box-shadow: 0px 0px 20px 0px #00000050;
+}
 
+input::placeholder {
+  color: grey;
+  transition: all 0.2s ease;
+}
+
+input:nth-of-type(1):focus::placeholder {
+  transform: translateX(-1rem) translateY(-2rem);
+}
+
+input:nth-of-type(2):focus::placeholder {
+  transform: translateY(-2rem);
+}
+
+input:nth-of-type(3):focus::placeholder {
+  transform: translateY(-2rem);
+}
+
+input:nth-of-type(4):focus::placeholder {
+  transform: translateY(-2rem);
+}
+
+label {
+  opacity: 0;
+  transform: translateX(0.8rem) translateY(1.92rem);
+  transition: all 0.2s ease;
+}
+
+#email-login:focus-within label {
+  transform: translateX(0) translateY(0);
+  opacity: 1;
+}
+
+#password-login:focus-within label {
+  transform: translateX(0) translateY(0);
+  opacity: 1;
+}

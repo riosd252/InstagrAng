@@ -3,6 +3,11 @@
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
 
+@font-face {
+  font-family: "Fontspring";
+  src: url("./assets/fonts/Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf");
+}
+
 body {
   min-height: 100vh;
   display: flex;

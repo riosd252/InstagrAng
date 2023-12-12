@@ -1,46 +1,71 @@
 <div class="container">
-  <form #form="ngForm" (ngSubmit)="signUp(form)">
+  <form
+    class="d-flex flex-column gap-3"
+    #form="ngForm"
+    (ngSubmit)="signUp(form)"
+  >
+    <h3>Sign-in</h3>
     <div class="form-group">
-      <label for="name">Name</label>
-      <input
-        type="text"
-        name="name"
-        id="name"
-        class="form-control"
-        required
-        ngModel
-      />
-      <label for="surname">Surname</label>
-      <input
-        type="text"
-        name="surname"
-        id="surname"
-        class="form-control"
-        required
-        ngModel
-      />
-    </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input
-        type="email"
-        name="email"
-        id="email"
-        class="form-control"
-        required
-        ngModel
-      />
-    </div>
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input
-        type="password"
-        name="password"
-        id="password"
-        class="form-control"
-        required
-        ngModel
-      />
+      <div id="name-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Name"
+          class="form-control"
+          required
+          ngModel
+        />
+      </div>
+      <div id="surname-group">
+        <label for="surname">Surname</label>
+        <input
+          type="text"
+          name="surname"
+          placeholder="Surname"
+          id="surname"
+          class="form-control"
+          required
+          ngModel
+        />
+      </div>
+      <div id="email-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          class="form-control"
+          required
+          ngModel
+        />
+      </div>
+      <div id="password-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          class="form-control"
+          required
+          ngModel
+        />
+      </div>
+      <div id="profile-pic-group">
+        <label for="profile-pic"></label>
+        <input
+          type="url"
+          name="profileImageUrl"
+          id="profile-pic"
+          placeholder="Url to profile picture"
+          class="form-control"
+          required
+          ngModel
+        />
+      </div>
     </div>
     <button
       type="submit"
@@ -49,5 +74,8 @@
     >
       Registrati
     </button>
+    <a class="text-center" [routerLink]="['/login']" routerLinkActive="active"
+      >Login</a
+    >
   </form>
 </div>
