@@ -3,6 +3,7 @@ import { AuthData } from 'src/app/auth/auth-data';
 import { AuthService } from 'src/app/auth/auth.service';
 import { Post } from 'src/app/models/post';
 import { PostsService } from 'src/app/services/posts.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -23,5 +24,11 @@ export class HomeComponent implements OnInit {
         this.posts = posts;
       });
     });
+  }
+
+  edit(form: NgForm, postId: number) {
+    const post: Post = form.value;
+    this.postSrv.editPost(post, postId).subscribe();
+    location.reload();
   }
 }

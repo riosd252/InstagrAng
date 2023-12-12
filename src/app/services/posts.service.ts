@@ -14,4 +14,8 @@ export class PostsService {
   getPosts() {
     return this.http.get<Post[]>(`${this.apiUrl}/posts`);
   }
+
+  editPost(post: Post, postId: number) {
+    return this.http.patch<Post>(`${this.apiUrl}/posts/${postId}`, post);
+  }
 }
