@@ -1,16 +1,27 @@
-<div class="mt-4 row gy-4">
+<div class="mt-5 pt-3 row gy-4">
   <div
     class="col-12 d-flex justify-content-center"
     *ngFor="let post of posts; let i = index"
   >
-    <div class="card">
+    <div class="card border-0 rounded-0">
       <img
         src="{{ post.imageUrl }}"
-        class="card-img-top"
+        class="card-img-top rounded-0"
         alt="{{ post.title }} image"
       />
-      <div class="card-body">
+      <div class="card-body px-0 py-3">
         <div #cardContent>
+          <div
+            class="d-flex align-items-center justify-content-between text-secondary"
+          >
+            <div class="d-flex gap-3">
+              <i class="fa-solid fa-heart fs-5"></i
+              ><i class="fa-solid fa-comment fs-5"></i>
+              <i class="fa-solid fa-paper-plane fs-5"></i>
+            </div>
+            <div class=""><i class="fa-solid fa-bookmark fs-5"></i></div>
+          </div>
+          <div class="likes fw-bold">218 likes</div>
           <h5 class="card-title">{{ post.title }}</h5>
           <p class="card-text">
             {{ post.body }}
