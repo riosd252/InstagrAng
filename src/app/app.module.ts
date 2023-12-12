@@ -12,6 +12,7 @@ import { SignUpComponent } from './auth/signup/signup.component';
 import { AuthGuard } from './auth/auth.guard';
 import { HomeComponent } from './components/home/home.component';
 import { UsersComponent } from './components/users/users.component';
+import { LolComponent } from './components/lol/lol.component';
 
 const routes: Route[] = [
   {
@@ -44,6 +45,7 @@ const routes: Route[] = [
     SignUpComponent,
     HomeComponent,
     UsersComponent,
+    LolComponent,
   ],
   imports: [
     BrowserModule,
