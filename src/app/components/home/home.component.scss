@@ -2,6 +2,14 @@
   max-width: 500px;
 }
 
+.card i {
+  cursor: pointer;
+}
+
+.card i:hover {
+  color: black;
+}
+
 .card img {
   aspect-ratio: 1 / 1;
   object-fit: cover;
