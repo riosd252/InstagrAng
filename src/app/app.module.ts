@@ -13,6 +13,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BottombarComponent } from './components/bottombar/bottombar.component';
+import { UsersComponent } from './components/users/users.component';
 
 const routes: Route[] = [
   {
@@ -39,7 +40,15 @@ const routes: Route[] = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignUpComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    SignUpComponent,
+    HomeComponent,
+    UsersComponent,
+    BottombarComponent,
+    NavbarComponent,
+  ],
   imports: [
     BrowserModule,
     NgbModule,

@@ -24,7 +24,7 @@ export class AuthService {
         this.authSubj.next(logged);
         this.user_ = logged;
         localStorage.setItem('user', JSON.stringify(logged));
-        this.router.navigate(['/users']);
+        this.router.navigate(['/home']);
       })
     );
   }

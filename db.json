@@ -7,7 +7,6 @@
       "surname": "rios",
       "id": 1
     },
-
     {
       "email": "cos@pet.com",
       "password": "$2a$10$IUWQAfR8vRe/xOFGfv96W.zSTUdv6lxheXqelh648k1j5cpz3F9LS",
@@ -28,8 +27,14 @@
       "name": "Dani",
       "surname": "Cagn",
       "id": 5
+    },
+    {
+      "email": "rafaelcasapaojr@gmail.com",
+      "password": "$2a$10$OwZ7/D0VMedn1UZBp.av..QYNONSxIS3qaezC1qryQdbCiiT38uBe",
+      "name": "rafael",
+      "surname": "casapao",
+      "id": 6
     }
   ],
-
   "posts": []
 }
