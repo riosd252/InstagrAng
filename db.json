@@ -5,8 +5,9 @@
       "password": "$2a$10$MpwLp0xzBlGXbMNFVRQtEOZIOqc5N.P86CVCabTh8Da532njsqkk.",
       "name": "david",
       "surname": "rios",
-      "posts": [],
       "id": 1
     }
-  ]
+  ],
+
+  "posts": []
 }

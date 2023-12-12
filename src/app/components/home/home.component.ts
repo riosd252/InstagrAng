@@ -23,17 +23,4 @@ export class HomeComponent implements OnInit {
       this.user = _user;
     });
   }
-
-  postPost(form: NgForm) {
-    this.post = form.value;
-    this.post.userId = this.user!.user.id;
-    console.log(this.post);
-
-    this.http
-      .post<[post: Post]>(
-        `${this.apiUrl}/users/${this.user!.user.id}/posts`,
-        this.post
-      )
-      .subscribe();
-  }
 }

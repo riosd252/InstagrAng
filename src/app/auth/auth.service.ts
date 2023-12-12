@@ -5,7 +5,6 @@ import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 import { BehaviorSubject, tap } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { Post } from '../models/post';
 
 @Injectable({
   providedIn: 'root',
@@ -49,7 +48,6 @@ export class AuthService {
     surname: string;
     email: string;
     password: string;
-    posts: Post[];
   }) {
     return this.http.post(`${this.apiURL}/signup`, user).pipe(
       tap(() => {
