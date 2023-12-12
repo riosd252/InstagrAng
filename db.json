@@ -27,6 +27,21 @@
       "name": "Dani",
       "surname": "Cagn",
       "id": 5
+    },
+    {
+      "email": "anto.bertu@gmail.com",
+      "password": "$2a$10$fiuxbKxRJS10lCK8wYD1HenACZgCkjSJLCAngsp83ENrih7VYsrNK",
+      "name": "Antonio",
+      "surname": "Bertuccio",
+      "id": 6
+    },
+    {
+      "email": "info@antoniobertuccio.com",
+      "password": "$2a$10$r3J3JLbaltrTeQ5rkJAvx.Pt3ExkOlYkCAbp3hODM6TCjD2mmfr7q",
+      "name": "Info",
+      "surname": "Bertuccio",
+      "profileImageUrl": "https://avatars.githubusercontent.com/u/46935714?v=4",
+      "id": 7
     }
   ],
   "posts": [
