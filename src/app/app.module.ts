@@ -11,6 +11,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignUpComponent } from './auth/signup/signup.component';
 import { AuthGuard } from './auth/auth.guard';
 import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { BottombarComponent } from './components/bottombar/bottombar.component';
 
 const routes: Route[] = [
   {
@@ -33,7 +35,7 @@ const routes: Route[] = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignUpComponent, HomeComponent],
+  declarations: [AppComponent, LoginComponent, SignUpComponent, HomeComponent, NavbarComponent, BottombarComponent],
   imports: [
     BrowserModule,
     NgbModule,

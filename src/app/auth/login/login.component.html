@@ -24,11 +24,13 @@
     </div>
     <button
       type="submit"
-      class="btn btn-primary mt-3"
+      class="btn btn-primary mt-3 w-100"
       [disabled]="form.invalid"
     >
       Login
     </button>
-    <a class="" [routerLink]="['/signup']" routerLinkActive="active">Sign Up</a>
+    <a class="text-center" [routerLink]="['/signup']" routerLinkActive="active"
+      >Sign Up</a
+    >
   </form>
 </div>
