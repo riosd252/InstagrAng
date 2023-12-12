@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { AuthData } from 'src/app/auth/auth-data';
 import { AuthService } from 'src/app/auth/auth.service';
 import { Post } from 'src/app/models/post';
-import { environment } from 'src/environments/environment';
-import { HttpClient } from '@angular/common/http';
+import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
   selector: 'app-home',
@@ -13,14 +11,17 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
   user!: AuthData | null;
-  post!: Post;
-  apiUrl = environment.apiUrl;
+  posts: Post[] = [];
 
-  constructor(private authSrv: AuthService, private http: HttpClient) {}
+  constructor(private authSrv: AuthService, private postSrv: PostsService) {}
 
   ngOnInit(): void {
     this.authSrv.user$.subscribe((_user) => {
       this.user = _user;
+
+      this.postSrv.getPosts().subscribe((posts: Post[]) => {
+        this.posts = posts;
+      });
     });
   }
 }
