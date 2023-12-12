@@ -7,13 +7,29 @@
       "surname": "rios",
       "id": 1
     },
+
     {
-      "email": "rafaelcasapaojr@gmail.com",
-      "password": "$2a$10$1jLBDeDWe6sVMbFtUnKcu.0QLW7ZmdvUfNiDOrjxbun7wjTnbeXmy",
-      "name": "rafael",
-      "surname": "casapao",
-      "id": 2
+      "email": "cos@pet.com",
+      "password": "$2a$10$IUWQAfR8vRe/xOFGfv96W.zSTUdv6lxheXqelh648k1j5cpz3F9LS",
+      "name": "Cosmin",
+      "surname": "Pet",
+      "id": 3
+    },
+    {
+      "email": "luca@utz.com",
+      "password": "$2a$10$7oRySesHrWZGH4GFyvGXDecpHjxx9jDXuGTEUadPu/RluqgcPMGU.",
+      "name": "Luca",
+      "surname": "Utz",
+      "id": 4
+    },
+    {
+      "email": "dani@ca.com",
+      "password": "$2a$10$jXycW3FXomGWA.QEZbUTE.FZ9UWX7Tnr4EnER2aqm5fCxR1LDbL0W",
+      "name": "Dani",
+      "surname": "Cagn",
+      "id": 5
     }
   ],
+
   "posts": []
 }
