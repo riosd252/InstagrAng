@@ -11,6 +11,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignUpComponent } from './auth/signup/signup.component';
 import { AuthGuard } from './auth/auth.guard';
 import { HomeComponent } from './components/home/home.component';
+import { UsersComponent } from './components/users/users.component';
 
 const routes: Route[] = [
   {
@@ -27,13 +28,23 @@ const routes: Route[] = [
     canActivate: [AuthGuard],
   },
   {
+    path: 'users',
+    component: UsersComponent,
+  },
+  {
     path: '**',
     redirectTo: '',
   },
 ];
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignUpComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    SignUpComponent,
+    HomeComponent,
+    UsersComponent,
+  ],
   imports: [
     BrowserModule,
     NgbModule,
