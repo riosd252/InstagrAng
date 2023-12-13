@@ -5,5 +5,6 @@ export interface AuthData {
     email: string;
     name: string;
     surname: string;
+    profileImageUrl: string;
   };
 }

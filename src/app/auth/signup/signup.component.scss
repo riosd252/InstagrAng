@@ -25,6 +25,10 @@ input:nth-of-type(4):focus::placeholder {
   transform: translateY(-2rem);
 }
 
+input:nth-of-type(5):focus::placeholder {
+  transform: translateY(-2rem);
+}
+
 label {
   opacity: 0;
   transform: translateX(0.8rem) translateY(1.92rem);
@@ -47,6 +51,11 @@ label {
 }
 
 #password-group:focus-within label {
+  transform: translateX(0) translateY(0);
+  opacity: 1;
+}
+
+#profile-pic-group:focus-within label {
   transform: translateX(0) translateY(0);
   opacity: 1;
 }
