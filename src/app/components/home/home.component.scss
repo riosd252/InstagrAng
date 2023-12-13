@@ -14,3 +14,8 @@
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
+
+input:focus {
+  border: none;
+  outline: none;
+}

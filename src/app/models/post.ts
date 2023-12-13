@@ -7,5 +7,5 @@ export interface Post {
   profilePictureUrl: string;
   imageUrl: string;
   body: string;
-  comments?: Comment[];
+  id?: number;
 }

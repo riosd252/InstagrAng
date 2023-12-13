@@ -18,6 +18,7 @@
         class="card-img-top rounded-0"
         alt="{{ post.name }}'s post image."
       />
+
       <div class="card-body px-0 py-3">
         <div #cardContent>
           <div
@@ -32,52 +33,106 @@
           </div>
           <div class="likes fw-bold">218 likes</div>
           <p class="card-text">
-            {{ post.body }}
+            <span class="fw-bold">{{ post.name }}</span> {{ post.body }}
           </p>
-        </div>
-        <a
-          #edit
-          *ngIf="post.userId === this.user?.user?.id"
-          class="btn btn-primary"
-          (click)="
-            bodyInput.value = post.body;
-            imageUrl.value = post.imageUrl;
-            edit.classList.add('d-none');
-            cardContent.className = 'd-none';
-            formContainer.classList.remove('d-none')
-          "
-          >Edit</a
-        >
-        <div #formContainer class="d-none">
-          <form #form="ngForm" (ngSubmit)="edit(form, i + 1)">
-            <div class="form-group">
-              <label for="post-image">Image url</label>
-              <input
-                #imageUrl
-                type="url"
-                name="imageUrl"
-                id="post-image"
-                class="form-control"
-                required
-                ngModel
-              />
-            </div>
-            <div class="form-group">
-              <label for="post-body">Description:</label>
-              <input
-                #bodyInput
-                type="text"
-                name="body"
-                id="post-body"
-                class="form-control"
-                required
-                ngModel
-              />
-            </div>
-            <button [disabled]="form.invalid" class="btn btn-success mt-3">
-              Confirm
+          <p class="mt-0">
+            <button type="button" class="bg-0 border-0 text-secondary mt-1">
+              View comments
             </button>
+          </p>
+          <div>
+            <ul
+              class="list-group list-group-flush"
+              *ngFor="let comment of comments"
+            >
+              <li
+                class="list-group-item bg-0 color-0"
+                *ngIf="comment.postId === post.id"
+              >
+                <img
+                  src="{{ comment.profilePictureUrl }}"
+                  alt="{{ comment.name }}'s picture"
+                  width="38"
+                  height="38"
+                  style="object-fit: cover"
+                />
+
+                <span class="mx-1 fw-bold"
+                  >{{ comment.name }} {{ comment.surname }}</span
+                >{{ comment.body }}
+              </li>
+            </ul>
+          </div>
+          <form
+            #comment="ngForm"
+            class="w-100"
+            (ngSubmit)="newComment(commentInp.value, post.id!)"
+          >
+            <input
+              type="text"
+              #commentInp
+              name="comments"
+              placeholder="Dive into this..."
+              class="border-0 border-bottom border-secondary bg-0 color-0 w-100"
+              ngModel
+            />
+            <button
+              type="button"
+              class="d-none"
+              [disabled]="comment.invalid"
+            ></button>
           </form>
+        </div>
+        <div *ngIf="post.userId === this.user?.user?.id">
+          <div #formContainer class="d-none">
+            <form #form="ngForm" (ngSubmit)="edit(form, i + 1)">
+              <div class="form">
+                <label for="post-body">Description:</label>
+                <input
+                  #bodyInput
+                  type="text"
+                  name="body"
+                  id="post-body"
+                  class="bg-0 color-0 border-0 border-bottom border-secondary w-100"
+                  required
+                  ngModel
+                />
+              </div>
+              <div class="w-100 d-flex justify-content-center pt-1">
+                <button
+                  [disabled]="form.invalid"
+                  class="bg-0 text-success border-0 me-1"
+                >
+                  Confirm
+                </button>
+                <button
+                  type="button"
+                  class="bg-0 text-danger border-0"
+                  (click)="
+                    formContainer.className = 'd-none';
+                    cardContent.className = '';
+                    editBtn.classList.remove('d-none')
+                  "
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="w-100 d-flex justify-content-center">
+            <button
+              #editBtn
+              class="bg-0 border-0 color-0 mt-1"
+              (click)="
+                bodyInput.value = post.body;
+                editBtn.classList.add('d-none');
+                cardContent.className = 'd-none';
+                formContainer.className = ''
+              "
+            >
+              Edit
+            </button>
+          </div>
         </div>
       </div>
     </div>

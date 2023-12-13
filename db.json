@@ -51,8 +51,8 @@
       "name": "David",
       "surname": "Rios",
       "profilePictureUrl": "https://64.media.tumblr.com/d76e7c44f367cf1a06d6b45b47c9111a/tumblr_pmrmln17xI1solxeko1_1280.jpg",
-      "imageUrl": "https://www.sorrisi.com/wp-content/uploads/2020/12/aquaman-1.jpg",
-      "body": "Prossimamente....",
+      "imageUrl": "https://media-assets.wired.it/photos/63ff35f504b9230fd6839b0b/16:9/w_1280,c_limit/mando%203.jpg",
+      "body": "The Mandalorian and Grogu 😎",
       "id": 1
     },
     {
@@ -60,9 +60,45 @@
       "name": "David",
       "surname": "Rios",
       "profilePictureUrl": "https://64.media.tumblr.com/d76e7c44f367cf1a06d6b45b47c9111a/tumblr_pmrmln17xI1solxeko1_1280.jpg",
-      "imageUrl": "https://media-assets.wired.it/photos/63ff35f504b9230fd6839b0b/16:9/w_1280,c_limit/mando%203.jpg",
-      "body": "Se non lo conosci sei g... non si può.",
+      "imageUrl": "https://www.quever.news/u/fotografias/m/2021/3/8/f848x477-7622_65425_4929.jpg",
+      "body": "Monarch legacy",
       "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "userId": 8,
+      "name": "David",
+      "surname": "Rios",
+      "profilePictureUrl": "https://64.media.tumblr.com/d76e7c44f367cf1a06d6b45b47c9111a/tumblr_pmrmln17xI1solxeko1_1280.jpg",
+      "postId": 1,
+      "body": "Testo placeholder.",
+      "id": 2
+    },
+    {
+      "userId": 8,
+      "name": "David",
+      "surname": "Rios",
+      "profilePictureUrl": "https://64.media.tumblr.com/d76e7c44f367cf1a06d6b45b47c9111a/tumblr_pmrmln17xI1solxeko1_1280.jpg",
+      "postId": 2,
+      "body": "Testo placeholder.",
+      "id": 3
+    },
+    {
+      "userId": 6,
+      "name": "Antonio",
+      "surname": "Bertuccio",
+      "postId": 2,
+      "body": "David ma cosa cavolo posti???",
+      "id": 4
+    },
+    {
+      "userId": 4,
+      "name": "Luca",
+      "surname": "Utz",
+      "postId": 2,
+      "body": "Ma infatti, che roba è???",
+      "id": 5
     }
   ]
 }
