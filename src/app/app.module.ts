@@ -33,6 +33,12 @@ const routes: Route[] = [
   {
     path: 'users',
     component: UsersComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'new-post',
+    component: CreatePostComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: '**',

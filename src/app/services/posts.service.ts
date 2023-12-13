@@ -20,6 +20,6 @@ export class PostsService {
   }
 
   editPost(post: Post, postId: number) {
-    return this.http.put<Post>(`${this.apiUrl}/posts/${postId}`, post);
+    return this.http.patch<Post>(`${this.apiUrl}/posts/${postId}`, post);
   }
 }
