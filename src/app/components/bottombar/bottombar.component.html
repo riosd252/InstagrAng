@@ -1,32 +1,35 @@
 <nav
-  class="navbar navbar-expand-lg position-fixed bottom-0 start-0 end-0 bg-white"
+  class="navbar navbar-expand-lg position-fixed bottom-0 start-0 end-0 bg-0 border-top border-color-0"
 >
   <div class="container-lg">
-    <div class="d-flex align-items-center justify-content-center">
-      <ul class="navbar-nav">
+    <div class="d-flex justify-content-between w-100 px-3">
+      <ul class="navbar-nav flex-row justify-content-around w-100">
         <li class="nav-item" *ngIf="utente">
-          <a
-            class="nav-link"
-            [routerLink]="['/new-post']"
-            routerLinkActive="active"
-            >New post</a
-          >
+          <button class="nav-link">
+            <i class="fa-solid fa-house fs-3 color-0"></i>
+          </button>
         </li>
         <li class="nav-item" *ngIf="utente">
-          <a class="nav-link">Favorites</a>
+          <button class="nav-link">
+            <i class="fa-solid fa-magnifying-glass fs-3 color-0"></i>
+          </button>
         </li>
         <li class="nav-item" *ngIf="utente">
-          <a class="nav-link">Profile</a>
+          <button class="nav-link">
+            <i class="fa-regular fa-square-plus fs-3 color-0"></i>
+          </button>
+        </li>
+        <li class="nav-item" *ngIf="utente">
+          <button class="nav-link">
+            <i class="fa-regular fa-paper-plane fs-3 color-0"></i>
+          </button>
+        </li>
+        <li class="utente" *ngIf="utente">
+          <button class="nav-link">
+            <i class="fa-regular fa-heart fs-3 color-0"></i>
+          </button>
         </li>
       </ul>
-      <button
-        type="button"
-        class="btn border-0"
-        *ngIf="utente"
-        (click)="logout()"
-      >
-        Logout
-      </button>
     </div>
   </div>
 </nav>
