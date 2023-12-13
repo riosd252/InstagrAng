@@ -1,5 +1,5 @@
 <nav
-  class="navbar navbar-expand-lg position-fixed top-0 start-0 end-0 bg-white"
+  class="navbar navbar-expand-lg position-fixed top-0 start-0 end-0 p-0 bg-0 border-bottom border-color-0"
 >
   <div class="container-lg">
     <div class="d-flex w-100 px-3">
@@ -10,11 +10,13 @@
         />ng</a
       >
       <ul class="navbar-nav d-flex flex-row justify-content-between w-100">
-        <li class="nav-item" *ngIf="utente">
+        <li class="nav-item d-flex align-items-center" *ngIf="utente">
           <a class="nav-link fs-5 fw-bolder color-0"
             >Per te
             <button class="btn p-1">
-              <i class="fa-solid fa-chevron-down fs-6 fw-semibold"></i></button
+              <i
+                class="fa-solid fa-chevron-down fs-6 fw-semibold color-0"
+              ></i></button
           ></a>
         </li>
         <li class="utente" *ngIf="utente">
@@ -22,7 +24,7 @@
             <div class="utente d-flex align-items-center">
               <button
                 type="button"
-                class="btn text-danger p-2 me-2"
+                class="btn text-danger p-2 me-2 fw-bolder"
                 *ngIf="utente"
                 (click)="logout()"
               >
