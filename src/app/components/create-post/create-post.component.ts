@@ -3,6 +3,7 @@ import { Post } from 'src/app/models/post';
 import { AuthData } from 'src/app/auth/auth-data';
 import { AuthService } from 'src/app/auth/auth.service';
 import { PostsService } from 'src/app/services/posts.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-create-post',
@@ -11,8 +12,15 @@ import { PostsService } from 'src/app/services/posts.service';
 })
 export class CreatePostComponent implements OnInit {
   user!: AuthData | null;
+  postImageUrl: string = '';
+  previewImage: string = '';
+  postDesc: string = '';
 
-  constructor(private authSrv: AuthService, private postSrv: PostsService) {}
+  constructor(
+    private authSrv: AuthService,
+    private postSrv: PostsService,
+    private http: HttpClient
+  ) {}
 
   ngOnInit(): void {
     this.authSrv.user$.subscribe((_user) => {
@@ -30,5 +38,19 @@ export class CreatePostComponent implements OnInit {
       body: desc,
     };
     this.postSrv.newPost(newPost).subscribe();
+  }
+
+  updatePreviewImage() {
+    this.http
+      .get(this.postImageUrl, { responseType: 'blob' })
+      .subscribe((response) => {
+        if (response instanceof Blob) {
+          const reader = new FileReader();
+          reader.onload = () => {
+            this.previewImage = reader.result as string;
+          };
+          reader.readAsDataURL(response);
+        }
+      });
   }
 }

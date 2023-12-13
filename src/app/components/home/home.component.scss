@@ -1,18 +1,16 @@
 .card {
-  max-width: 500px;
-}
-
-.card i {
-  cursor: pointer;
-}
-
-.card i:hover {
-  color: black;
+  width: 500px;
 }
 
 .card img {
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  object-position: center;
+}
+
+#edit-post-btn {
+  top: -1.5rem;
+  right: -0.2rem;
 }
 
 input:focus {
