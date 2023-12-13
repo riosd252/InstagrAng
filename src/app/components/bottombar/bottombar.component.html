@@ -5,6 +5,23 @@
     <div class="d-flex justify-content-between w-100 px-3">
       <ul class="navbar-nav flex-row justify-content-around w-100">
         <li class="nav-item" *ngIf="utente">
+          <button
+            type="button"
+            class="btn rounded-circle d-flex align-items-center p-0"
+            [routerLink]="['/users']"
+            routerLinkActive="active"
+          >
+            <img
+              src="{{ utente.user.profileImageUrl }}"
+              alt="{{ utente.user.name }}'s profile picture"
+              width="38"
+              height="38"
+              style="object-fit: cover"
+              class="d-inline-block align-text-top rounded-circle m-0 p-0"
+            />
+          </button>
+        </li>
+        <li class="nav-item" *ngIf="utente">
           <button class="nav-link">
             <i class="fa-solid fa-house fs-3 color-0"></i>
           </button>
