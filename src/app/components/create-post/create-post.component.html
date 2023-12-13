@@ -1,15 +1,59 @@
-<form
-  class="form-group"
-  #form="ngForm"
-  (ngSubmit)="createPost(postImage.value, postDesc.value)"
->
-  <div>
-    <label for="imageUrl">Insert post image url:</label>
-    <input type="url" class="form-control" #postImage ngModel />
+<div class="my-5 py-5 row gy-4">
+  <div class="card bg-0 color-0 border-0 rounded-0">
+    <div class="mb-3 d-flex justify-content-between px-3">
+      <div class="pic-and-username">
+        <img
+          class="rounded-circle"
+          src="{{ user?.user?.profileImageUrl }}"
+          alt="{{ user?.user?.name }}'s profile picture."
+          width="38"
+          height="38"
+          style="object-fit: cover"
+        /><span class="ms-3"
+          >{{ user?.user?.name }} {{ user?.user?.name }}</span
+        >
+      </div>
+      <i class="fa-solid fa-ellipsis d-flex align-items-center"></i>
+    </div>
+    <div class="">
+      <img
+        id="postImage"
+        class="card-img border-0 border-color-0 bg-1"
+        [src]="previewImage || '../../../assets/img/InstagrAng-1.png'"
+      />
+      <div class="card-body px-3">
+        <form
+          class="form-group color-1 h-100"
+          #form="ngForm"
+          (ngSubmit)="createPost(postImageInput.value, postDesc)"
+        >
+          <div class="">
+            <label for="imageUrl">Insert post image URL</label>
+            <input
+              id="imageUrl"
+              type="url"
+              class="form-control bg-0 border-color-0"
+              [(ngModel)]="postImageUrl"
+              name="postImage"
+              #postImageInput
+              placeholder="Insert post image URL:"
+              (input)="updatePreviewImage()"
+            />
+          </div>
+          <div class="">
+            <label for="postBody">Post description</label>
+            <textarea
+              id="postBody"
+              type="text"
+              class="form-control bg-0 border-color-0"
+              [(ngModel)]="postDesc"
+              name="postDesc"
+              placeholder="Post description:"
+            ></textarea>
+          </div>
+          <button class="btn btn-outline-primary mt-3">Post!</button>
+        </form>
+      </div>
+    </div>
   </div>
-  <div>
-    <label for="postBody">Post description:</label>
-    <input type="text" class="form-control" #postDesc ngModel />
-  </div>
-  <button class="btn btn-outline-primary">Post!</button>
-</form>
+</div>

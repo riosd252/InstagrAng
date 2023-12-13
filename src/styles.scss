@@ -16,31 +16,6 @@
     --color-1: #737373;
     --border-color-0: #dbdbdb;
   }
-
-  .bg-0 {
-    background-color: var(--bg-0) !important;
-  }
-
-  .bg-1 {
-    background-color: var(--bg-1) !important;
-  }
-
-  .color-0 {
-    color: var(--color-0) !important;
-  }
-
-  .color-1 {
-    color: var(--color-1) !important;
-  }
-
-  .border-color-0 {
-    border-color: var(--border-color-0) !important;
-  }
-
-  body {
-    background-color: var(--color-0) !important;
-    color: var(--color-0) !important;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -51,31 +26,34 @@
     --color-1: #a8a8a8;
     --border-color-0: #363636;
   }
+}
 
-  .bg-0 {
-    background-color: var(--bg-0) !important;
-  }
+button:focus,
+button:active,
+input:focus,
+input:active {
+  border: none !important;
+  outline: none !important;
+}
 
-  .bg-1 {
-    background-color: var(--bg-1) !important;
-  }
+.bg-0 {
+  background-color: var(--bg-0) !important;
+}
 
-  .color-0 {
-    color: var(--color-0) !important;
-  }
+.bg-1 {
+  background-color: var(--bg-1) !important;
+}
 
-  .color-1 {
-    color: var(--color-1) !important;
-  }
+.color-0 {
+  color: var(--color-0) !important;
+}
 
-  .border-color-0 {
-    border-color: var(--border-color-0) !important;
-  }
+.color-1 {
+  color: var(--color-1) !important;
+}
 
-  body {
-    background-color: var(--color-0) !important;
-    color: var(--color-0) !important;
-  }
+.border-color-0 {
+  border-color: var(--border-color-0) !important;
 }
 
 body {
@@ -84,8 +62,36 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--color-0) !important;
+  color: var(--color-0) !important;
 }
 
 button {
   cursor: pointer;
+  color: var(--color-0) !important;
+}
+
+button:hover {
+  filter: brightness(0.75);
+}
+
+i:hover {
+  color: var(--color-1) !important;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  filter: brightness(0.75);
+}
+
+input {
+  height: 2rem;
+  color: var(--color-0);
+}
+
+input::placeholder {
+  color: var(--color-1);
 }

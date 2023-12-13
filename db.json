@@ -26,6 +26,7 @@
       "password": "$2a$10$fiuxbKxRJS10lCK8wYD1HenACZgCkjSJLCAngsp83ENrih7VYsrNK",
       "name": "Antonio",
       "surname": "Bertuccio",
+      "profileImageUrl": "https://avatars.githubusercontent.com/u/46935714?v=4",
       "id": 6
     },
     {
@@ -63,6 +64,51 @@
       "imageUrl": "https://media-assets.wired.it/photos/63ff35f504b9230fd6839b0b/16:9/w_1280,c_limit/mando%203.jpg",
       "body": "Se non lo conosci sei g... non si può.",
       "id": 2
+    },
+    {
+      "userId": 6,
+      "name": "Antonio",
+      "surname": "Bertuccio",
+      "profilePictureUrl": "https://avatars.githubusercontent.com/u/46935714?v=4",
+      "imageUrl": "https://wallpapers.com/images/high/funny-memes-picture-59tk18xot81xf8r6.webp",
+      "body": "The best angle for a picture of a seal 🤣",
+      "id": 3
+    },
+    {
+      "userId": 6,
+      "name": "Antonio",
+      "surname": "Bertuccio",
+      "profilePictureUrl": "https://avatars.githubusercontent.com/u/46935714?v=4",
+      "imageUrl": "https://www.my-personaltrainer.it/2023/10/12/petauro-dello-zucchero_900x760.jpeg",
+      "body": "I miei animali preferiti p1 - Petauro da zucchero",
+      "id": 4
+    },
+    {
+      "userId": 6,
+      "name": "Antonio",
+      "surname": "Bertuccio",
+      "profilePictureUrl": "https://avatars.githubusercontent.com/u/46935714?v=4",
+      "imageUrl": "https://rivistanatura.com/wp-content/uploads/2020/07/Gambero-mantide.jpg",
+      "body": "I miei animali preferiti p2 - Il gambero Mantide\nSapevi che può vedere 12 colori rispetto ai 3 che vediamo noi umani?",
+      "id": 5
+    },
+    {
+      "userId": 6,
+      "name": "Antonio",
+      "surname": "Bertuccio",
+      "profilePictureUrl": "https://avatars.githubusercontent.com/u/46935714?v=4",
+      "imageUrl": "https://www.microbiologiaitalia.it/wp-content/uploads/2023/11/sindrome-papera.webp",
+      "body": "",
+      "id": 6
+    },
+    {
+      "userId": 6,
+      "name": "Antonio",
+      "surname": "Bertuccio",
+      "profilePictureUrl": "https://avatars.githubusercontent.com/u/46935714?v=4",
+      "imageUrl": "https://www.microbiologiaitalia.it/wp-content/uploads/2023/11/sindrome-papera.webp",
+      "body": "",
+      "id": 7
     }
   ]
 }
