@@ -14,6 +14,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BottombarComponent } from './components/bottombar/bottombar.component';
 import { UsersComponent } from './components/users/users.component';
+import { CreatePostComponent } from './components/create-post/create-post.component';
 
 const routes: Route[] = [
   {
@@ -48,6 +49,7 @@ const routes: Route[] = [
     UsersComponent,
     BottombarComponent,
     NavbarComponent,
+    CreatePostComponent,
   ],
   imports: [
     BrowserModule,

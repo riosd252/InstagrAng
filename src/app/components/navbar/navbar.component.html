@@ -9,12 +9,13 @@
       />ng</a
     >
     <div class="d-flex">
-      <a *ngIf="utente" class="navbar-brand m-0 p-0 me-3" href="#">
+      <a *ngIf="utente" class="navbar-brand m-0 p-0 me-3">
         <img
-          src="../../../assets/img/user-placeholder.jpg"
-          alt="Logo"
+          src="{{ utente.user.profileImageUrl }}"
+          alt="{{ utente.user.name }}'s profile picture"
           width="38"
           height="38"
+          style="object-fit: cover"
           class="d-inline-block align-text-top rounded-circle m-0 p-0"
         />
       </a>

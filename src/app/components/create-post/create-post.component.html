@@ -1,0 +1,15 @@
+<form
+  class="form-group"
+  #form="ngForm"
+  (ngSubmit)="createPost(postImage.value, postDesc.value)"
+>
+  <div>
+    <label for="imageUrl">Insert post image url:</label>
+    <input type="url" class="form-control" #postImage ngModel />
+  </div>
+  <div>
+    <label for="postBody">Post description:</label>
+    <input type="text" class="form-control" #postDesc ngModel />
+  </div>
+  <button class="btn btn-outline-primary">Post!</button>
+</form>

@@ -15,7 +15,11 @@ export class PostsService {
     return this.http.get<Post[]>(`${this.apiUrl}/posts`);
   }
 
+  newPost(post: Post) {
+    return this.http.post<Post>(`${this.apiUrl}/posts`, post);
+  }
+
   editPost(post: Post, postId: number) {
-    return this.http.patch<Post>(`${this.apiUrl}/posts/${postId}`, post);
+    return this.http.put<Post>(`${this.apiUrl}/posts/${postId}`, post);
   }
 }

@@ -19,10 +19,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.authSrv.user$.subscribe((_user) => {
       this.user = _user;
+    });
 
-      this.postSrv.getPosts().subscribe((posts: Post[]) => {
-        this.posts = posts;
-      });
+    this.postSrv.getPosts().subscribe((posts: Post[]) => {
+      this.posts = posts;
     });
   }
 
