@@ -8,6 +8,12 @@
   src: url("./assets/fonts/Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf");
 }
 
+:root {
+  --bg-1: #ffffff;
+  --bg-2: #fafafa;
+  --color-1: #000000;
+}
+
 body {
   min-height: 100vh;
   display: flex;
