@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/auth/auth.service';
 })
 export class NavbarComponent implements OnInit {
   utente!: AuthData | null;
+  public isLightTheme = true;
 
   constructor(private authSrv: AuthService) {}
 
@@ -20,5 +21,14 @@ export class NavbarComponent implements OnInit {
 
   logout() {
     this.authSrv.logOut();
+  }
+
+  onThemeSwitchChange() {
+    this.isLightTheme = !this.isLightTheme;
+
+    document.body.setAttribute(
+      'data-theme',
+      this.isLightTheme ? 'light' : 'dark'
+    );
   }
 }
