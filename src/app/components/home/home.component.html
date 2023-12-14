@@ -24,9 +24,7 @@
       />
       <div class="card-body px-3">
         <div #cardContent>
-          <div
-            class="d-flex align-items-start justify-content-between text-secondary"
-          >
+          <div class="d-flex align-items-start justify-content-between color-1">
             <div class="d-flex gap-4 pt-0 pb-3 color-0">
               <i class="fa-regular fa-heart fs-4"></i>
               <i class="fa-regular fa-comment fs-4"></i>
@@ -41,7 +39,7 @@
             <span class="fw-bold">{{ post.name }}</span> {{ post.body }}
           </p>
           <p class="mt-0">
-            <button type="button" class="bg-0 border-0 text-secondary mt-1">
+            <button type="button" class="bg-0 border-0 color-1 ps-0">
               View comments
             </button>
           </p>
@@ -78,7 +76,7 @@
               #commentInp
               name="comments"
               placeholder="Dive into this..."
-              class="border-0 border-bottom border-secondary bg-0 color-0 w-100"
+              class="border-0 border-bottom border-color-0 bg-0 color-0 w-100"
               ngModel
             />
             <button
@@ -127,7 +125,7 @@
           <div class="w-100 d-flex justify-content-center">
             <button
               #editBtn
-              class="bg-0 border-0 color-0 mt-1"
+              class="bg-0 border-0 color-0"
               (click)="
                 bodyInput.value = post.body;
                 editBtn.classList.add('d-none');
@@ -135,7 +133,7 @@
                 formContainer.className = ''
               "
             >
-              Edit
+              <i class="fa-regular fa-pen-to-square"></i>
             </button>
           </div>
         </div>
