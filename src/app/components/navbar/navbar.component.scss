@@ -1,3 +1,7 @@
+nav {
+  font-family: "Fontspring";
+}
+
 #darklight-1 {
   height: 1.5rem;
   width: 1.5rem;
@@ -54,4 +58,14 @@ input:checked ~ .moon {
   left: 150%;
   background-color: rgb(0, 0, 0);
   transform: translate(-50%, -50%);
+}
+
+#logout i {
+  margin-top: 3px;
+  color: rgb(229, 112, 112);
+}
+
+button:hover {
+  filter: brightness(0.9);
+  transition: none;
 }
