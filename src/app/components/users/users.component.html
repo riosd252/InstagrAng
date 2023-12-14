@@ -1,28 +1,40 @@
-<div class="container bg-white" id="bodyUser">
+<div class="container bg-0 color-0" id="bodyUser">
   <header class="mb-3">
     <section class="d-flex flex-row p-3 align-items-center">
       <div class="col-3 p-3 row justify-content-center">
-        <div id="logoProfilo">User</div>
+        <div id="logoProfilo">
+          <img
+            id="user-img"
+            src="{{ this.user.profileImageUrl }}"
+            alt="{{ this.user.name }}'s profile picture."
+          />
+        </div>
       </div>
-      <div class="col-3 text-center">post</div>
-      <div class="col-3 text-center">follower</div>
-      <div class="col text-center">following</div>
+      <div class="col-3 text-center">
+        <div class="display-1">{{ this.userPosts.length }}</div>
+        <div>Post</div>
+      </div>
+      <div class="col-3 text-center">
+        <div class="display-1">1.2M</div>
+        <div>follower</div>
+      </div>
+      <div class="col text-center">
+        <div class="display-1">20</div>
+        <div>following</div>
+      </div>
     </section>
     <section>
-      <h2>UserName</h2>
+      <h2>{{ this.user.name }} {{ this.user.surname }}</h2>
       <p class="m-0">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quos
-        suscipit velit nemo tenetur. Fuga asperiores tempora, at eos unde veniam
-        iste ratione ut quia quae? Unde cupiditate ullam accusantium. Itaque
-        iure ipsum ab autem sapiente voluptatibus, libero, suscipit ratione
-        ullam non doloribus quibusdam odio. Aspernatur, reprehenderit molestias
-        eos atque doloremque provident. Perferendis nisi vitae architecto totam,
-        tenetur molestias ex. Rem nulla hic, eveniet unde dolores ipsam
-        accusantium, neque quia culpa rerum assumenda ipsa aliquid? Magni eaque
-        iste deleniti odit mollitia tempore, dolores vero doloribus neque
-        laborum incidunt, veniam eligendi!
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga,
+        architecto ipsam quaerat accusamus, consectetur minima veniam, aperiam
+        odio expedita laborum earum eaque necessitatibus! Saepe laudantium,
+        doloribus veniam delectus distinctio est. Laborum at doloribus commodi
+        maxime itaque praesentium obcaecati dolorem. Temporibus rerum sequi
+        explicabo? Quam architecto, harum repellendus aperiam debitis corrupti
+        nihil a rerum quisquam eos? A ipsa aperiam illum temporibus.
       </p>
-      <a href="#">ONLYFANS Gianni Cabiddu</a>
+      <a>😘😘😘😘</a>
     </section>
   </header>
   <main class="mb-3">

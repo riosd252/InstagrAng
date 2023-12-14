@@ -16,8 +16,6 @@
             <button class="btn p-1">
               <i
                 class="fa-solid fa-chevron-down fs-6 fw-semibold color-0"
-                [routerLink]="['/users']"
-                routerLinkActive="active"
               ></i></button
           ></a>
         </li>
@@ -36,7 +34,7 @@
               <button
                 type="button"
                 class="btn rounded-circle d-flex align-items-center p-0"
-                [routerLink]="['/users']"
+                [routerLink]="[utente.user.id]"
                 routerLinkActive="active"
               >
                 <img

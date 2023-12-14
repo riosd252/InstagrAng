@@ -31,7 +31,8 @@
   margin: 80px 0;
 }
 // HEADER //
-#logoProfilo {
+
+#user-img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -54,8 +55,4 @@
 #midBar div:hover {
   border-radius: 20px 20px 0px 0px;
   border: 1px solid black;
-}
-
-#post {
-  // max-width: 300px;
 }
