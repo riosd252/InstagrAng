@@ -47,13 +47,18 @@
                 />
               </button>
 
-              <button id="light" class="rounded-circle">
-                <span class="light"></span>
-              </button>
-              <button id="dark" class="rounded-circle">
-                <span class="dark"></span>
-                <span class="dark-cover"></span>
-              </button>
+              <div
+                id="darklight-1"
+                class="theme-switcher d-flex align-items-center justify-content-center"
+              >
+                <input
+                  class="sun"
+                  type="checkbox"
+                  [checked]="isLightTheme"
+                  (change)="onThemeSwitchChange()"
+                />
+                <span class="moon"></span>
+              </div>
             </div>
           </div>
         </li>

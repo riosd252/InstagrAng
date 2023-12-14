@@ -8,6 +8,10 @@
   object-position: center;
 }
 
+.card i {
+  cursor: pointer;
+}
+
 #edit-post-btn {
   top: -1.5rem;
   right: -0.2rem;
@@ -16,4 +20,8 @@
 input:focus {
   border: none;
   outline: none;
+}
+
+button:hover {
+  filter: none;
 }
