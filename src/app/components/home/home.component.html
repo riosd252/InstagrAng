@@ -100,7 +100,7 @@
         </div>
         <div *ngIf="post.userId === this.user?.user?.id">
           <div #formContainer class="d-none">
-            <form #form="ngForm" (ngSubmit)="edit(form, i + 1)">
+            <form #form="ngForm" (ngSubmit)="edit(form, post.id!)">
               <div class="form">
                 <label for="post-body">Description:</label>
                 <input

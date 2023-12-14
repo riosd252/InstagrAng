@@ -9,26 +9,27 @@ import { Comment } from '../models/comment';
 })
 export class PostsService {
   apiUrl = environment.apiUrl;
+  mockUrl = environment.mockUrl;
 
   constructor(private http: HttpClient) {}
 
   getPosts() {
-    return this.http.get<Post[]>(`${this.apiUrl}/posts`);
+    return this.http.get<Post[]>(`${this.mockUrl}/posts`);
   }
 
   newPost(post: Post) {
-    return this.http.post<Post>(`${this.apiUrl}/posts`, post);
+    return this.http.post<Post>(`${this.mockUrl}/posts`, post);
   }
 
   editPost(post: Post, postId: number) {
-    return this.http.patch<Post>(`${this.apiUrl}/posts/${postId}`, post);
+    return this.http.put<Post>(`${this.mockUrl}/posts/${postId}`, post);
   }
 
   getComments() {
-    return this.http.get<Comment[]>(`${this.apiUrl}/comments`);
+    return this.http.get<Comment[]>(`${this.mockUrl}/comments`);
   }
 
   postComment(comment: Comment) {
-    return this.http.post<Comment>(`${this.apiUrl}/comments`, comment);
+    return this.http.post<Comment>(`${this.mockUrl}/comments`, comment);
   }
 }

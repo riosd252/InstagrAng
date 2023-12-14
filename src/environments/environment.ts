@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:4201',
+  mockUrl: 'https://657b180e394ca9e4af13ac5d.mockapi.io',
 };
 
 /*
