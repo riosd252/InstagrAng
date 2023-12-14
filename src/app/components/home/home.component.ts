@@ -5,6 +5,7 @@ import { Post } from 'src/app/models/post';
 import { PostsService } from 'src/app/services/posts.service';
 import { NgForm } from '@angular/forms';
 import { Comment } from 'src/app/models/comment';
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ export class HomeComponent implements OnInit {
   user!: AuthData | null;
   posts: Post[] = [];
   comments: Comment[] = [];
+  isCollapsed = true;
 
   constructor(private authSrv: AuthService, private postSrv: PostsService) {}
 
