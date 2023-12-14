@@ -56,3 +56,11 @@
   border-radius: 20px 20px 0px 0px;
   border: 1px solid black;
 }
+
+// POST GRID
+
+.post-img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  object-fit: cover;
+}
