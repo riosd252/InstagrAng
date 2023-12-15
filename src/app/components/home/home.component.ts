@@ -6,6 +6,7 @@ import { PostsService } from 'src/app/services/posts.service';
 import { NgForm } from '@angular/forms';
 import { Comment } from 'src/app/models/comment';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { Like } from 'src/app/models/like';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
   posts: Post[] = [];
   comments: Comment[] = [];
   isCollapsed = true;
+  isLike = (obj: Like) => obj.userId === this.user!.user.id;
 
   constructor(private authSrv: AuthService, private postSrv: PostsService) {}
 
@@ -53,11 +55,28 @@ export class HomeComponent implements OnInit {
       postId: postId,
       body: comment,
     };
-    console.log(newComment);
 
     this.postSrv.postComment(newComment).subscribe((resp) => {
       if (resp) {
         location.reload();
+      }
+    });
+  }
+
+  like(post: Post) {
+    const thisPost = post;
+    thisPost.likes.push({ userId: this.user!.user.id });
+
+    this.postSrv.postLike(thisPost).subscribe();
+  }
+
+  unlike(post: Post) {
+    const thisPost = post;
+    thisPost.likes.forEach((obj) => {
+      if (obj.userId === this.user!.user.id) {
+        const myLike = thisPost.likes.indexOf(obj);
+        thisPost.likes.splice(myLike, 1);
+        this.postSrv.postLike(thisPost).subscribe();
       }
     });
   }

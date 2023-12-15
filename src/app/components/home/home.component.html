@@ -29,17 +29,26 @@
       <div class="card-body px-1 px-sm-3">
         <div #cardContent>
           <div class="d-flex align-items-start justify-content-between color-1">
-            <div class="d-flex gap-4 pt-0 pb-1 pb-sm-3 color-0">
-              <i class="fa-regular fa-heart fs-3"></i>
-              <i class="fa-regular fa-comment fs-3"></i>
-              <i class="fa-regular fa-paper-plane fs-3"></i>
+            <div class="d-flex gap-4 pt-0 pb-3 color-0">
+              <i
+                class="fa-solid text-danger fa-heart fs-4"
+                *ngIf="post.likes.some(isLike)"
+                (click)="unlike(post)"
+              ></i>
+              <i
+                class="fa-regular fa-heart fs-4"
+                (click)="like(post)"
+                *ngIf="!post.likes.some(isLike)"
+              ></i>
+              <i class="fa-regular fa-comment fs-4"></i>
+              <i class="fa-regular fa-paper-plane fs-4"></i>
             </div>
             <div class="d-flex color-0">
               <i class="fa-regular fa-bookmark fs-3"></i>
             </div>
           </div>
-          <div class="likes fw-bold">218 likes</div>
-          <p class="card-text mb-1 mb-sm-3">
+          <div class="likes fw-bold">{{ post.likes.length }} likes</div>
+          <p class="card-text">
             <span class="fw-bold">{{ post.name }}</span> {{ post.body }}
           </p>
           <p class="mt-0 mb-0">
