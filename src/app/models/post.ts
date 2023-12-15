@@ -7,5 +7,6 @@ export interface Post {
   profilePictureUrl: string;
   imageUrl: string;
   body: string;
+  likes: number;
   id?: number;
 }
