@@ -38,6 +38,7 @@ export class CreatePostComponent implements OnInit {
       profilePictureUrl: this.user!.user.profileImageUrl,
       imageUrl: imgUrl,
       body: desc,
+      likes: 0,
     };
     this.postSrv
       .newPost(newPost)
