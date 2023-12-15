@@ -1,91 +1,52 @@
-<div class="container bg-0 color-0 my-5 py-3" id="bodyUser">
-  <header class="mb-3">
-    <section class="d-flex flex-row py-3 align-items-center">
-      <div class="col-3 p-0 row justify-content-center">
-        <div id="logoProfilo">
+<div id="bodyUser" class="container bg-0 color-0 my-4 py-4 my-lg-5 w-100">
+  <header class="mb-3 w-100">
+    <section
+      class="d-flex flex-row align-items-center justify-content-center m-0 p-0 py-3 w-100"
+    >
+      <div class="col-3 p-0 row justify-content-center me-1">
+        <div class="object-fit-cover w-100">
           <img
             id="user-img"
+            class="object-fit-cover w-100"
             src="{{ this.user.profileImageUrl }}"
             alt="{{ this.user.name }}'s profile picture."
           />
         </div>
       </div>
       <div class="col-3 text-center">
-        <div class="display-3">{{ this.userPosts.length }}</div>
-        <div>Post</div>
+        <div class="display-6 color-0">{{ this.userPosts.length }}</div>
+        <div class="color-0">Post</div>
       </div>
       <div class="col-3 text-center">
-        <div class="display-3">1.2M</div>
-        <div>follower</div>
+        <div class="display-6 color-0">1.2M</div>
+        <div class="color-0">follower</div>
       </div>
-      <div class="col text-center">
-        <div class="display-3">20</div>
-        <div>following</div>
+      <div class="col-3 text-center">
+        <div class="display-6 color-0">20</div>
+        <div class="color-0">following</div>
       </div>
     </section>
-    <section>
+    <section class="my-3 my-md-4">
       <h2>{{ this.user.name }} {{ this.user.surname }}</h2>
-      <p class="m-0">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga,
-        architecto ipsam quaerat accusamus, consectetur minima veniam, aperiam
-        odio expedita laborum earum eaque necessitatibus! Saepe laudantium,
-        doloribus veniam delectus distinctio est. Laborum at doloribus commodi
-        maxime itaque praesentium obcaecati dolorem. Temporibus rerum sequi
-        explicabo? Quam architecto, harum repellendus aperiam debitis corrupti
-        nihil a rerum quisquam eos? A ipsa aperiam illum temporibus.
-      </p>
-      <a>😘😘😘😘</a>
+      <pre id="user-bio" class="m-0 p-0">
+        👨‍💻 Passionate developer
+        ✈ Enthuisiast Traveller
+        🍕 Pizza lover</pre
+      >
     </section>
   </header>
-  <main class="mb-3">
-    <section>
-      <div id="midBar" class="row p-0">
-        <div class="col-4 text-center p-3">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            fill="currentColor"
-            class="bi bi-border-all"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M0 0h16v16H0zm1 1v6.5h6.5V1zm7.5 0v6.5H15V1zM15 8.5H8.5V15H15zM7.5 15V8.5H1V15z"
-            />
-          </svg>
-        </div>
-        <div class="col-4 text-center p-3">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            fill="currentColor"
-            class="bi bi-collection-play"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3m2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1m2.765 5.576A.5.5 0 0 0 6 7v5a.5.5 0 0 0 .765.424l4-2.5a.5.5 0 0 0 0-.848l-4-2.5z"
-            />
-            <path
-              d="M1.5 14.5A1.5 1.5 0 0 1 0 13V6a1.5 1.5 0 0 1 1.5-1.5h13A1.5 1.5 0 0 1 16 6v7a1.5 1.5 0 0 1-1.5 1.5zm13-1a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-.5-.5h-13A.5.5 0 0 0 1 6v7a.5.5 0 0 0 .5.5z"
-            />
-          </svg>
-        </div>
-        <div class="col-4 text-center p-3">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            fill="currentColor"
-            class="bi bi-file-person"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
-            />
-            <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-          </svg>
-        </div>
+  <main class="mb-3 w-100">
+    <section class="w-100">
+      <div id="midBar" class="row p-0 w-100">
+        <button class="col-4 text-center p-3">
+          <i class="fa-solid fa-border-all fs-3 color-0"></i>
+        </button>
+        <button class="col-4 text-center p-3">
+          <i class="fa-solid fa-film fs-3 color-0"></i>
+        </button>
+        <button class="col-4 text-center p-3">
+          <i class="fa-regular fa-user fs-3 color-0"></i>
+        </button>
       </div>
       <div id="postsContainer" class="row p-0">
         <div class="col-4 g-1" *ngFor="let post of userPosts">

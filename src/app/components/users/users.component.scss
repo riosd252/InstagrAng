@@ -1,56 +1,47 @@
 // HEADER //
 
 #user-img {
-  width: 75px;
-  height: 75px;
   border-radius: 9999px;
 }
 
+#bodyUser {
+  width: 100%;
+}
+
 @media only screen and (min-width: 577px) {
-  #user-img {
-    width: 100px;
-    height: 100px;
+  #bodyUser {
   }
 }
 
 @media only screen and (min-width: 769px) {
-  #user-img {
-    width: 125px;
-    height: 125px;
+  #bodyUser {
   }
 }
 
 @media only screen and (min-width: 993px) {
-  #user-img {
-    width: 150px;
-    height: 150px;
+  #bodyUser {
   }
 }
 
 @media only screen and (min-width: 1201px) {
-  #user-img {
-    width: 175px;
-    height: 175px;
+  #bodyUser {
   }
 }
 
-// MAIN //
-// SECTION STORIE IN EVIDENZA //
-#StorieInEvidenzaContainer div {
-  height: 75px;
-  width: 75px;
-  border-radius: 50%;
-  border-style: solid;
+pre {
+  margin-left: -1.75rem !important;
+  padding: 0 !important;
+  font-family: "Roboto", sans-serif;
 }
+
 // MIDBAR //
 
-#midBar div {
-  border-radius: 20px 20px 0px 0px;
-  border: 1px solid transparent;
+#midBar button {
+  border: none;
+  background-color: transparent;
 }
-#midBar div:hover {
-  border-radius: 20px 20px 0px 0px;
-  border: 1px solid black;
+#midBar button:hover {
+  background-color: rgba(128, 128, 128, 0.1);
 }
 
 // POST GRID
