@@ -39,6 +39,7 @@ export class CreatePostComponent implements OnInit {
       imageUrl: imgUrl,
       body: desc,
       likes: [],
+      comments: [],
     };
     this.postSrv
       .newPost(newPost)

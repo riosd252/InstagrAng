@@ -26,15 +26,7 @@ export class PostsService {
     return this.http.put<Post>(`${this.mockUrl}/posts/${postId}`, post);
   }
 
-  getComments() {
-    return this.http.get<Comment[]>(`${this.mockUrl}/comments`);
-  }
-
-  postComment(comment: Comment) {
-    return this.http.post<Comment>(`${this.mockUrl}/comments`, comment);
-  }
-
-  postLike(post: Post) {
-    return this.http.put<Post>(`${this.mockUrl}/posts/${post.id}`, post);
+  deletePost(postId: number) {
+    return this.http.delete<Post>(`${this.mockUrl}/posts/${postId}`);
   }
 }
