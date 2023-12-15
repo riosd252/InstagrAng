@@ -19,7 +19,6 @@
             style="object-fit: cover"
           /><span class="ms-3">{{ post.name }} {{ post.surname }}</span>
         </button>
-        <i class="fa-solid fa-ellipsis d-flex align-items-center"></i>
       </div>
       <img
         src="{{ post.imageUrl }}"
@@ -158,7 +157,9 @@
                 formContainer.className = ''
               "
             >
-              <i class="fa-regular fa-pen-to-square"></i>
+              <i
+                class="fa-solid fa-ellipsis d-flex align-items-center fs-4"
+              ></i>
             </button>
           </div>
         </div>
