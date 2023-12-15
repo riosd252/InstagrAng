@@ -58,7 +58,9 @@ export class HomeComponent implements OnInit {
 
     this.postSrv.postComment(newComment).subscribe((resp) => {
       if (resp) {
-        location.reload();
+        this.postSrv.getComments().subscribe((comments: Comment[]) => {
+          this.comments = comments;
+        });
       }
     });
   }
