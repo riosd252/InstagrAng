@@ -1,5 +1,7 @@
-.card {
-  width: 500px;
+@media only screen and (min-width: 577px) {
+  .card {
+    width: 500px;
+  }
 }
 
 .card img {
