@@ -66,12 +66,9 @@
           <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
             <ul
               class="list-group list-group-flush"
-              *ngFor="let comment of comments"
+              *ngFor="let comment of post.comments"
             >
-              <li
-                class="list-group-item bg-0 color-0 px-0 py-1"
-                *ngIf="comment.postId === post.id"
-              >
+              <li class="list-group-item bg-0 color-0 px-0 py-1">
                 <img
                   class="rounded-circle me-1"
                   src="{{ comment.profilePictureUrl }}"
@@ -90,7 +87,7 @@
           <form
             #comment="ngForm"
             class="w-100"
-            (ngSubmit)="newComment(commentInp.value, post.id!)"
+            (ngSubmit)="newComment(commentInp.value, post)"
           >
             <input
               type="text"
@@ -127,18 +124,25 @@
                   [disabled]="form.invalid"
                   class="bg-0 text-success border-0 me-1"
                 >
-                  Confirm
+                  Edit post
                 </button>
                 <button
                   type="button"
-                  class="bg-0 text-danger border-0"
+                  class="bg-0 text-warning border-0"
                   (click)="
                     formContainer.className = 'd-none';
                     cardContent.className = '';
                     editBtn.classList.remove('d-none')
                   "
                 >
-                  Cancel
+                  Go back
+                </button>
+                <button
+                  type="button"
+                  class="bg-0 text-danger border-0"
+                  (click)="deletePost(post.id!)"
+                >
+                  Delete
                 </button>
               </div>
             </form>

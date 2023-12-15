@@ -16,7 +16,6 @@ import { Like } from 'src/app/models/like';
 export class HomeComponent implements OnInit {
   user!: AuthData | null;
   posts: Post[] = [];
-  comments: Comment[] = [];
   isCollapsed = true;
   isLike = (obj: Like) => obj.userId === this.user!.user.id;
 
@@ -31,35 +30,37 @@ export class HomeComponent implements OnInit {
       posts.reverse();
       this.posts = posts;
     });
-
-    this.postSrv.getComments().subscribe((comments: Comment[]) => {
-      this.comments = comments;
-    });
   }
 
   edit(form: NgForm, postId: number) {
     const post: Post = form.value;
     this.postSrv.editPost(post, postId).subscribe((resp) => {
       if (resp) {
-        location.reload();
+        this.postSrv.getPosts().subscribe((posts: Post[]) => {
+          posts.reverse();
+          this.posts = posts;
+        });
       }
     });
   }
 
-  newComment(comment: string, postId: number) {
+  newComment(comment: string, post: Post) {
     const newComment: Comment = {
       userId: this.user!.user.id,
       name: this.user!.user.name,
       surname: this.user!.user.surname,
       profilePictureUrl: this.user!.user.profileImageUrl,
-      postId: postId,
       body: comment,
     };
 
-    this.postSrv.postComment(newComment).subscribe((resp) => {
+    const thisPost = post;
+    thisPost.comments.push(newComment);
+
+    this.postSrv.editPost(thisPost, thisPost.id!).subscribe((resp) => {
       if (resp) {
-        this.postSrv.getComments().subscribe((comments: Comment[]) => {
-          this.comments = comments;
+        this.postSrv.getPosts().subscribe((posts: Post[]) => {
+          posts.reverse();
+          this.posts = posts;
         });
       }
     });
@@ -69,7 +70,7 @@ export class HomeComponent implements OnInit {
     const thisPost = post;
     thisPost.likes.push({ userId: this.user!.user.id });
 
-    this.postSrv.postLike(thisPost).subscribe();
+    this.postSrv.editPost(thisPost, thisPost.id!).subscribe();
   }
 
   unlike(post: Post) {
@@ -78,7 +79,18 @@ export class HomeComponent implements OnInit {
       if (obj.userId === this.user!.user.id) {
         const myLike = thisPost.likes.indexOf(obj);
         thisPost.likes.splice(myLike, 1);
-        this.postSrv.postLike(thisPost).subscribe();
+        this.postSrv.editPost(thisPost, thisPost.id!).subscribe();
+      }
+    });
+  }
+
+  deletePost(postId: number) {
+    this.postSrv.deletePost(postId).subscribe((resp) => {
+      if (resp) {
+        this.postSrv.getPosts().subscribe((posts: Post[]) => {
+          posts.reverse();
+          this.posts = posts;
+        });
       }
     });
   }

@@ -3,6 +3,5 @@ export interface Comment {
   name: string;
   surname: string;
   profilePictureUrl: string;
-  postId: number;
   body: string;
 }
