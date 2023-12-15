@@ -1,27 +1,6 @@
 {
   "users": [
     {
-      "email": "cos@pet.com",
-      "password": "$2a$10$IUWQAfR8vRe/xOFGfv96W.zSTUdv6lxheXqelh648k1j5cpz3F9LS",
-      "name": "Cosmin",
-      "surname": "Pet",
-      "id": 3
-    },
-    {
-      "email": "luca@utz.com",
-      "password": "$2a$10$7oRySesHrWZGH4GFyvGXDecpHjxx9jDXuGTEUadPu/RluqgcPMGU.",
-      "name": "Luca",
-      "surname": "Utz",
-      "id": 4
-    },
-    {
-      "email": "dani@ca.com",
-      "password": "$2a$10$jXycW3FXomGWA.QEZbUTE.FZ9UWX7Tnr4EnER2aqm5fCxR1LDbL0W",
-      "name": "Dani",
-      "surname": "Cagn",
-      "id": 5
-    },
-    {
       "email": "anto.bertu@gmail.com",
       "password": "$2a$10$fiuxbKxRJS10lCK8wYD1HenACZgCkjSJLCAngsp83ENrih7VYsrNK",
       "name": "Antonio",
