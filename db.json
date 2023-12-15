@@ -39,6 +39,14 @@
       "surname": "Rios",
       "profileImageUrl": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/11/batman-blank-eyed-mask-header.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5",
       "id": 10
+    },
+    {
+      "email": "otman@karim.com",
+      "password": "$2a$10$I/VClgGWqSOXP25ylUzTbOFzuV82lkZGwccxYStgCm3wdAJql7VqO",
+      "name": "Otman",
+      "surname": "Karim",
+      "profileImageUrl": "https://pics.zeitauktion.com/2023/2300998_sw6_theme2_2k.jpg",
+      "id": 11
     }
   ]
 }
